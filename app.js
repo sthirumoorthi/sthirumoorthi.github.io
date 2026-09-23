@@ -20,3 +20,25 @@ document.querySelectorAll('.practice-question').forEach(question=>{
   result.className=`practice-result ${correct?'correct':'incorrect'}`;
  });
 });
+
+// The decorative swing is opt-in through JS so a pause control is always usable.
+const identityCard=document.querySelector('.identity-panel');
+if(identityCard){
+ const motionButton=document.createElement('button');
+ motionButton.type='button';
+ motionButton.className='card-motion-toggle';
+ motionButton.setAttribute('aria-label','Pause card animation');
+ motionButton.setAttribute('aria-pressed','false');
+ motionButton.title='Pause card animation';
+ motionButton.textContent='Ⅱ';
+ motionButton.addEventListener('click',()=>{
+  const paused=identityCard.dataset.motionPaused!=='true';
+  identityCard.dataset.motionPaused=String(paused);
+  motionButton.setAttribute('aria-pressed',String(paused));
+  motionButton.setAttribute('aria-label',paused?'Resume card animation':'Pause card animation');
+  motionButton.title=paused?'Resume card animation':'Pause card animation';
+  motionButton.textContent=paused?'▶':'Ⅱ';
+ });
+ identityCard.append(motionButton);
+ identityCard.classList.add('swing-ready');
+}

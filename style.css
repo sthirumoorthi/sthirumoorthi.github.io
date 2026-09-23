@@ -59,3 +59,16 @@ body:has(.hero) .discipline{padding:18px 0;gap:12px 20px}
  .hero .identity-panel{padding:14px;gap:12px;grid-template-columns:minmax(0,.6fr) minmax(0,1fr)}
  body:has(.hero) header{padding-inline:18px}
 }
+
+/* Suspended profile card: small angles preserve the responsive layout. */
+.hero .identity-panel{transform-origin:50% -18px;--card-swing-angle:1.8deg}
+.hero .identity-panel::before{content:"";position:absolute;left:calc(50% - 1px);top:-19px;width:2px;height:18px;background:var(--line);border-radius:2px}
+.card-motion-toggle{position:absolute;top:-12px;right:12px;display:none;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;background:white;color:var(--blue);box-shadow:0 3px 10px #17244012;font-size:1rem;line-height:1;z-index:1}
+@keyframes card-swing{0%,100%{transform:rotate(calc(-1 * var(--card-swing-angle)))}50%{transform:rotate(var(--card-swing-angle))}}
+@media(prefers-reduced-motion:no-preference){
+ .hero .identity-panel.swing-ready{animation:card-swing 5s ease-in-out infinite}
+ .hero .identity-panel.swing-ready .card-motion-toggle{display:inline-flex}
+ .hero .identity-panel[data-motion-paused="true"]{animation-play-state:paused}
+}
+@media(max-width:700px){.hero .identity-panel{--card-swing-angle:1deg}}
+@media(prefers-reduced-motion:reduce){.hero .identity-panel{animation:none;transform:none}}
