@@ -212,3 +212,24 @@ header nav a,body:has(.hero) header nav a,body:has(.page-head) header nav a{font
  .exam-actions{flex-direction:column}
  .credential{gap:12px}
 }
+
+/* Certification overview: short copy and compact, equal cards. */
+.certifications-page .page-head{padding:24px 0 18px}
+.certifications-page .page-head h1{font-size:1.75rem}
+.certifications-page .page-head>p{font-size:.875rem;margin-top:8px}
+.certifications-page .exam-grid{gap:16px;margin:16px 0 10px}
+.certifications-page .exam-card{padding:14px}
+.certifications-page .exam-top{margin-bottom:8px}
+.certifications-page .path-label,.certifications-page .exam-code{font-size:.75rem;line-height:1.4}
+.certifications-page .exam-card h2,.certifications-page .credential h2{font-size:1rem;line-height:1.4;letter-spacing:-.01em}
+main.certifications-page .exam-grid .exam-card>p,main.certifications-page .credentials .credential p{font-size:.875rem;line-height:1.5;margin:6px 0 12px}
+.certifications-page .exam-facts{padding:8px 0;margin:auto 0 10px;gap:8px 16px}
+.certifications-page .exam-facts li,.certifications-page .exam-facts strong{font-size:.8125rem;line-height:1.5}
+.certifications-page .exam-actions{flex-direction:row;flex-wrap:wrap;gap:8px}
+.certifications-page .exam-actions .button{font-size:.875rem;padding:8px 14px;min-height:40px}
+.certifications-page .source-note{font-size:.8125rem;margin:8px 0 0}
+.certifications-page .education-heading{padding-top:24px}
+.certifications-page .education-heading h2{font-size:1.125rem}
+.certifications-page .credentials{margin:12px 0 32px}
+.certifications-page .credential{padding:14px;align-items:center}
+main.certifications-page .credential p{margin:4px 0 0}
