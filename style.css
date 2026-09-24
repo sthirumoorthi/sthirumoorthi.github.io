@@ -233,3 +233,27 @@ main.certifications-page .exam-grid .exam-card>p,main.certifications-page .crede
 .certifications-page .credentials{margin:12px 0 32px}
 .certifications-page .credential{padding:14px;align-items:center}
 main.certifications-page .credential p{margin:4px 0 0}
+
+/* Site-wide compact scale, matching the certification overview. */
+:root{--type-body:.875rem;--type-label:.8125rem;--type-card:1rem;--type-section:1.125rem;--type-title:1.75rem}
+.hero .panel-bottom h2{font-size:var(--type-card);line-height:1.4}
+.hero .panel-bottom p{font-size:var(--type-body);line-height:1.5}
+.about .large{font-size:var(--type-body)}
+.project-body>a,.github,.back-link,.practice-banner,.study-sidebar nav a,.study-sidebar .button,.searchrow input,.searchrow select,.filters button,#layout{font-size:var(--type-body);line-height:1.5}
+.practice-banner strong,.practice-banner span{font-size:var(--type-body)}
+.study-content h3,.try-it h3,.task-list h3{font-size:var(--type-card);line-height:1.4}
+.study-content .exam-facts li,.study-content .exam-facts strong,.topic-weight,.num{font-size:var(--type-label)}
+.study-sidebar>p:last-child,.task-item small,.task-item summary b,.practice-explanation{font-size:var(--type-body);line-height:1.55}
+.project-art .art-caption,.project-grid:not(.list) .project-art .art-caption{font-size:var(--type-label)}
+.project-art>span,.project-grid:not(.list) .project-art>span,.resource-type,.brand small,.discipline{font-size:.75rem}
+header .brand,footer .brand{font-size:var(--type-body)}
+header .github,footer>a:last-child{font-size:var(--type-body)}
+.hero .button,.button,.exam-actions .button{font-size:var(--type-body);line-height:1.5;min-height:40px}
+.hero .textlink,.textlink{font-size:var(--type-body)}
+.hero .eyebrow,.page-head .eyebrow,.project-body .eyebrow,.eyebrow{font-size:var(--type-label);letter-spacing:1px}
+.study-content .source-note,.certifications-page .source-note{font-size:var(--type-label)}
+.page-head>p:last-child{margin-top:8px}
+.hero .intro{margin:16px 0 20px}
+.about{padding:40px 0 24px}
+.focus-grid article{padding:20px}
+.focus-grid h3{margin:16px 0 12px}
