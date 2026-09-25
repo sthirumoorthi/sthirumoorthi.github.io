@@ -323,3 +323,7 @@ header{position:sticky;top:0;z-index:1000;background:var(--bg)}
 .page-head-meta .back-link{display:inline-flex;align-items:center;justify-content:center;min-height:32px;margin:0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:var(--type-label);line-height:1.4;color:var(--blue);white-space:nowrap}
 .page-head-meta .back-link:hover{background:#eaf0ff}
 @media(max-width:420px){.page-head-meta{gap:8px}.page-head-meta .eyebrow{font-size:.7rem;letter-spacing:.7px}.page-head-meta .back-link{padding:4px 9px}}
+
+/* Light accent for the local mock exam action. */
+.certifications-page .exam-actions .button-mock{background:#eaf0ff;color:var(--blue);border:1px solid #cdd9ff;box-shadow:none}
+.certifications-page .exam-actions .button-mock:hover{background:#dfe8ff;color:#183fc9}
