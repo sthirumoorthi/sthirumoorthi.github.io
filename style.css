@@ -257,3 +257,59 @@ header .github,footer>a:last-child{font-size:var(--type-body)}
 .about{padding:40px 0 24px}
 .focus-grid article{padding:20px}
 .focus-grid h3{margin:16px 0 12px}
+
+
+/* Exam orientation: compact facts with optional detail. */
+.begin-head{padding:20px 0 16px;margin-bottom:18px}
+.begin-head .back-link{margin-bottom:10px}
+.begin-head .eyebrow{margin-bottom:8px}
+.begin-page{max-width:1120px;margin:0 auto 40px}
+.begin-facts{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:0 0 24px;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.begin-facts>div{padding:14px 16px;border-right:1px solid var(--line)}
+.begin-facts>div:last-child{border:0}
+.begin-facts dt{font-size:var(--type-label);color:var(--muted);margin-bottom:4px}
+.begin-facts dd{margin:0;font-size:var(--type-section);font-weight:700}
+.begin-facts dd span{font-size:var(--type-label);font-weight:400;white-space:nowrap}
+.begin-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:28px;align-items:start}
+.begin-details,.begin-next{min-width:0}
+.begin-intro{padding:0 0 18px}
+.begin-page h2{font-size:var(--type-section);line-height:1.4;letter-spacing:-.02em}
+.begin-intro p{margin:8px 0}
+.begin-source,.begin-disclosure a,.orientation-link a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.begin-source{font-size:var(--type-label)}
+.begin-disclosure{border-top:1px solid var(--line)}
+.begin-disclosure:last-child{border-bottom:1px solid var(--line)}
+.begin-disclosure summary{cursor:pointer;min-height:48px;padding:13px 2px;font-size:var(--type-body);font-weight:600}
+.begin-disclosure summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.begin-disclosure summary span{font-size:var(--type-label);font-weight:400;color:var(--muted);margin-left:8px}
+.begin-disclosure[open] summary{color:var(--blue)}
+.begin-disclosure>div{padding:0 8px 14px 18px;color:var(--muted)}
+.begin-disclosure p{margin:4px 0 10px}
+.begin-disclosure ul{padding-left:18px;margin:0}
+.begin-disclosure li{margin:5px 0}
+.begin-disclosure .begin-domains{list-style:none;padding:0}
+.begin-domains li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:7px 0}
+.begin-domains strong{color:var(--blue);flex-shrink:0}
+.begin-next{padding:20px;border:1px solid var(--line);border-radius:12px;background:#fff8f4}
+.begin-next .eyebrow{margin-bottom:8px}
+.begin-next ol{padding-left:18px;color:var(--muted);margin:12px 0 18px}
+.begin-next li{margin:6px 0}
+.begin-next .button{display:flex;justify-content:center;padding:9px 12px;margin-top:10px;box-shadow:none}
+main .begin-next .begin-practice-note{font-size:var(--type-label);margin:16px 0 0}
+.begin-page>.source-note{margin:20px 0 0}
+.orientation-link{margin:0 0 18px;padding:12px 16px;border:1px solid var(--line);border-radius:8px}
+.certifications-page .exam-actions .button{padding:8px 11px}
+@media(max-width:900px){
+ .begin-layout{grid-template-columns:minmax(0,1fr) 250px;gap:20px}
+ .begin-facts{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .begin-facts>div{border-bottom:1px solid var(--line)}
+ .begin-facts>div:nth-child(3){border-right:0}
+ .begin-facts>div:nth-child(n+4){border-bottom:0}
+}
+@media(max-width:700px){
+ .begin-layout{grid-template-columns:minmax(0,1fr)}
+ .begin-facts>div{padding:12px 10px}
+ .begin-next{padding:16px}
+ .begin-head{padding-top:18px}
+}
+
