@@ -316,3 +316,10 @@ main .begin-next .begin-practice-note{font-size:var(--type-label);margin:16px 0 
 
 /* Keep the shared site navigation visible while visitors browse each page. */
 header{position:sticky;top:0;z-index:1000;background:var(--bg)}
+
+/* Put the back-to-certifications chip on the exam title line. */
+.page-head-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px}
+.page-head-meta .eyebrow{margin:0}
+.page-head-meta .back-link{display:inline-flex;align-items:center;justify-content:center;min-height:32px;margin:0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:var(--type-label);line-height:1.4;color:var(--blue);white-space:nowrap}
+.page-head-meta .back-link:hover{background:#eaf0ff}
+@media(max-width:420px){.page-head-meta{gap:8px}.page-head-meta .eyebrow{font-size:.7rem;letter-spacing:.7px}.page-head-meta .back-link{padding:4px 9px}}
