@@ -339,3 +339,14 @@ header{position:sticky;top:0;z-index:1000;background:var(--bg)}
 .certifications-page .exam-card:nth-child(1) .exam-actions .button-begin:hover{background:#dfe8ff;color:#183fc9}
 .certifications-page .exam-card:nth-child(2) .exam-actions .button-begin{background:#fff0e8;color:#b94e32;border:1px solid #f1c5b7;box-shadow:none}
 .certifications-page .exam-card:nth-child(2) .exam-actions .button-begin:hover{background:#ffe5d8;color:#983c25}
+
+/* Keep both mock actions neutral at rest and theme every Professional hover. */
+.certifications-page .exam-card:nth-child(1) .exam-actions .button-mock{background:#fff;color:var(--blue);border:1px solid var(--line);box-shadow:none}
+.certifications-page .exam-card:nth-child(1) .exam-actions .button-mock:hover{background:#eaf0ff;color:var(--blue);border-color:#cdd9ff}
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-mock{background:#fff;color:var(--blue);border:1px solid var(--line);box-shadow:none}
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-begin:hover,
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-begin:focus-visible,
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-secondary:hover,
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-secondary:focus-visible,
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-mock:hover,
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-mock:focus-visible{background:#ffe5d8;color:#983c25;border-color:#f1c5b7;box-shadow:none}
