@@ -313,3 +313,6 @@ main .begin-next .begin-practice-note{font-size:var(--type-label);margin:16px 0 
  .begin-head{padding-top:18px}
 }
 
+
+/* Keep the shared site navigation visible while visitors browse each page. */
+header{position:sticky;top:0;z-index:1000;background:var(--bg)}
