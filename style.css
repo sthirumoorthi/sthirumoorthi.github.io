@@ -333,3 +333,9 @@ header{position:sticky;top:0;z-index:1000;background:var(--bg)}
 .certifications-page .exam-card:nth-child(1) .exam-actions .button-mock:hover{background:#dfe8ff;color:#183fc9}
 .certifications-page .exam-card:nth-child(2) .exam-actions .button-mock{background:#fff0e8;color:#b94e32;border:1px solid #f1c5b7;box-shadow:none}
 .certifications-page .exam-card:nth-child(2) .exam-actions .button-mock:hover{background:#ffe5d8;color:#983c25}
+
+/* Theme the first card action to match each path card. */
+.certifications-page .exam-card:nth-child(1) .exam-actions .button-begin{background:#eaf0ff;color:var(--blue);border:1px solid #cdd9ff;box-shadow:none}
+.certifications-page .exam-card:nth-child(1) .exam-actions .button-begin:hover{background:#dfe8ff;color:#183fc9}
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-begin{background:#fff0e8;color:#b94e32;border:1px solid #f1c5b7;box-shadow:none}
+.certifications-page .exam-card:nth-child(2) .exam-actions .button-begin:hover{background:#ffe5d8;color:#983c25}
