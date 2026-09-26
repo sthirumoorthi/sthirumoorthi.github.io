@@ -82,7 +82,7 @@
   function fitQuestion() {
     const content = $('.question-content'); if (!content) return;
     content.style.setProperty('--fit-scale', '1');
-    requestAnimationFrame(() => { let scale = 1; while (content.scrollHeight > content.clientHeight + 2 && scale > .40) { scale -= .04; content.style.setProperty('--fit-scale', scale.toFixed(2)); } });
+    requestAnimationFrame(() => { let scale = 1; while (content.scrollHeight > content.clientHeight + 2 && scale > .86) { scale = Math.max(.86, scale - .04); content.style.setProperty('--fit-scale', scale.toFixed(2)); } });
   }
   window.addEventListener('resize', fitQuestion);
   function togglePause() {

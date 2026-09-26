@@ -176,6 +176,6 @@ for e in exams:
 page('claude-architect-foundations-mock.html','CCAR-F Mock Exam','''<div id="mock-app" aria-live="polite"><section class="load-error"><h1>Preparing your exam</h1><p>Loading the randomized 60-question set…</p></section></div>''')
 mock=p.joinpath('claude-architect-foundations-mock.html')
 mock_html=mock.read_text().replace('<body>','<body class="mock-exam-body">')
-mock_html=mock_html.replace('</head>','<link rel="stylesheet" href="/ccar-f-mock.css?v=20260926-ccarf-mock-16"></head>')
-mock_html=mock_html.replace('</body>','<script src="/ccar-f-mock.js?v=20260926-ccarf-mock-15"></script></body>')
+mock_html=mock_html.replace('</head>','<link rel="stylesheet" href="/ccar-f-mock.css?v=20260926-ccarf-mock-17"></head>')
+mock_html=mock_html.replace('</body>','<script src="/ccar-f-mock.js?v=20260926-ccarf-mock-16"></script></body>')
 mock.write_text(mock_html)
