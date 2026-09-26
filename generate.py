@@ -75,7 +75,9 @@ foundation_tasks=[
 exams[0]['guide_summary']='The guide maps 30 task statements to five domains. Use the weight as a study-time signal, then work through each linked lesson and exercise.'
 exams[0]['domains']=[(name,weight,summary,'Complete the linked lesson, write a small implementation or decision record, and explain the exam trap in your own words.',tasks) for name,weight,summary,tasks in foundation_tasks]
 def exam_buttons(e):
- return f'<div class="exam-actions"><a class="button button-begin" href="/{e["slug"]}-before-you-begin.html" aria-label="Before you begin — {e["level"]}">Before you begin</a><a class="button button-secondary" href="/{e["slug"]}.html">Study guide</a><a class="button button-secondary" href="{practice_routes[e["level"]]}" aria-label="Start local Practice Exam for {e["level"]}">Practice</a><a class="button button-secondary button-mock" href="{practice_routes[e["level"]]}" aria-label="Take the local five-question mock exam for {e["level"]}">Take Mock Exam</a></div>'
+ mock_route='/claude-architect-foundations-mock.html' if e['level']=='Foundations' else practice_routes[e['level']]
+ mock_label='Take 60-question CCAR-F mock exam' if e['level']=='Foundations' else f'Take local mock exam for {e["level"]}'
+ return f'<div class="exam-actions"><a class="button button-begin" href="/{e["slug"]}-before-you-begin.html" aria-label="Before you begin — {e["level"]}">Before you begin</a><a class="button button-secondary" href="/{e["slug"]}.html">Study guide</a><a class="button button-secondary" href="{practice_routes[e["level"]]}" aria-label="Start local Practice Exam for {e["level"]}">Practice</a><a class="button button-secondary button-mock" href="{mock_route}" aria-label="{mock_label}">Take Mock Exam</a></div>
 examcards=''
 for e in exams:
  examcards+=f'''<article class="exam-card"><div class="exam-top"><span class="path-label">CLAUDE ARCHITECT</span><span class="exam-code">{e['code']}</span></div><h2>{e['level']}</h2><p>{'Agents, tools, and reliable prompts.' if e['level']=='Foundations' else 'Architecture, evaluation, and governance.'}</p><ul class="exam-facts"><li><strong>{e['questions']}</strong> questions</li><li><strong>120</strong> minutes</li><li><strong>{len(e['domains'])}</strong> topics</li></ul>{exam_buttons(e)}</article>'''
@@ -168,3 +170,12 @@ for e in exams:
  f=p.joinpath(file)
  f.write_text(f.read_text().replace('<a href="/certifications.html" >','<a href="/certifications.html" aria-current="page">'))
 
+
+
+# Full-length randomized CCAR-F mock exam.
+page('claude-architect-foundations-mock.html','CCAR-F Mock Exam','''<div id="mock-app" aria-live="polite"><section class="load-error"><h1>Preparing your exam</h1><p>Loading the randomized 60-question set…</p></section></div>''')
+mock=p.joinpath('claude-architect-foundations-mock.html')
+mock_html=mock.read_text().replace('<body>','<body class="mock-exam-body">')
+mock_html=mock_html.replace('</head>','<link rel="stylesheet" href="/ccar-f-mock.css?v=20260926-ccarf-mock-16"></head>')
+mock_html=mock_html.replace('</body>','<script src="/ccar-f-mock.js?v=20260926-ccarf-mock-15"></script></body>')
+mock.write_text(mock_html)
