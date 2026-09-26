@@ -19,3 +19,25 @@
 .result-retake-button{background:var(--green);border-color:var(--green);color:#fff}
 .result-retake-button:hover{background:#244840;border-color:#244840}
 @media(max-width:620px){.results-page{padding:10px}.result-bar{gap:8px;padding:8px;margin-bottom:14px;border-radius:13px}.result-monogram{width:32px;height:32px;font-size:11px}.result-brand{gap:7px}.result-brand small{font-size:8px}.result-brand b{font-size:11px;max-width:150px}.result-actions{gap:5px}.results-cert-button,.result-retake-button{min-height:34px;padding:7px 10px;font-size:10px}.result-hero{margin-top:0}}
+
+:root{--warm:#eef3ff;--rust:#294de8;--green:#1d3477}
+.exam-shell,.results-page{background:radial-gradient(circle at 100% 100%,rgba(41,77,232,.08),transparent 26%),#f3f6ff}
+.time-box{background:#eaf0ff;border-color:#ccd8ff}
+.submit-button,.confirm-submit,.restart-button{background:#294de8;border-color:#294de8;color:#fff}
+.submit-button:hover,.confirm-submit:hover,.restart-button:hover{background:#203fbe;border-color:#203fbe}
+.map-legend .legend-marked{background:#294de8}
+.answer-option:has(input:checked){border-color:#9aaef7;background:#f0f4ff}
+.question-title{font-family:var(--sans);font-size:calc(14px*max(.85,var(--fit-scale)));font-weight:600;line-height:1.45;letter-spacing:0}
+.question-domain{color:#294de8}
+.result-hero{background:linear-gradient(110deg,#f8faff,#eef3ff)}
+.score-ring{background:conic-gradient(#294de8 var(--score),#e1e7f4 0)}
+.benchmark-note{border-left-color:#294de8}
+.domain-results>.eyebrow,.review-heading .eyebrow,.domain-row small,.review-notes b{color:#294de8}
+.domain-track i{background:#294de8}
+.review-card{border-left-color:#536fc9}
+.review-question-meta b{color:#294de8}
+.review-choice.choice-selected-wrong{background:#eff3ff;border-color:#9baceb}
+.review-notes{background:#edf2ff}
+.result-end a{color:#294de8}
+@media(max-width:900px){.question-title{font-size:calc(13px*max(.85,var(--fit-scale)))}}
+@media(max-width:620px){.question-title{font-size:calc(12px*max(.85,var(--fit-scale)));line-height:1.45}}
